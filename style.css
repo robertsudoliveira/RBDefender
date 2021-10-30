@@ -12,9 +12,12 @@ a {
 }
 body {
   font: 400 1rem "DM Sans", sans-serif;
+  color: var(--text-color);
+  background:var(--body-color);
 }
 h1 {
   font: 700 1.875rem "Poppins", sans-serif;
+  color: var(--title-color);
 }
 /* variables*/
 :root {
