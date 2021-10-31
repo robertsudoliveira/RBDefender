@@ -58,6 +58,14 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
+.divider-1{
+  height: 1px;
+  background:linear-gradient(
+    270deg,
+    hsla(159, 36%, 57%, 1) 0%,
+    hsla(159, 66%, 88%, 0.34) 100%
+  );
+}
 .logo {
   font: 700 1.31rem "Poppins", sans-serif;
   color: var(--title-color);
