@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+ul{
+  list-style: none;
+}
 img {
   width: 100%;
   height: auto;
@@ -16,7 +19,7 @@ body {
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
-h1 {
+.title {
   font: 700 1.875rem "Poppins", sans-serif;
   color: var(--title-color);
   -webkit-font-smoothing: auto;
@@ -35,6 +38,21 @@ h1 {
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
 }
+main {
+  margin-top: calc(var(--header-height)+ 2rem);
+}
+#header {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: calc(var(--body-color)+ 2rem);
+}
+/*logo */
 .logo {
   font: 700 1.31rem "Poppins", sans-serif;
   color: var(--title-color);
@@ -42,9 +60,8 @@ h1 {
 .logo span{
   color: var(--base-color);
 }
-main {
-  margin-top: var(--header-height);
-}
+
+/*===========layout============*/
 .container {
  
   margin-left: 1.5rem;
@@ -69,23 +86,71 @@ main {
   background:var(--base-color-alt);
 }
 
-#header {
-  border-bottom: 1px solid #e4e4e4;
-  margin-bottom: 2rem;
-  display: flex;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  background: var(--body-color);
+/*============Logo============*/
+.logo {
+  font: 700 1.31rem "Poppins", sans-serif;
+  color: var(--title-color);
 }
+.logo span{
+  color: var(--base-color);
+}
+/*===========Navigation============*/
+
 nav {
   height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+ 
+nav ul li{
+  text-align: center;
+}
+nav ul li a:hover{
+  color: var(--base-color);
+
+}
+nav ul li a::after{
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--base-color);
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+  transition: 0.2s;
+
+}
+nav ul li a:hover::after{
+width: 100%;
+
+}
+nav ul li a {
+  transition: color 0.2s;
+  position: relative;
+}
+nav .menu{
+  opacity: 0;
+  visibility: hidden;
+}
+/*=======Mostrar o menu=======*/
+nav.show .menu{
+  opacity: 1;
+  visibility: visible;
+  background: var(--body-color);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+nav.show .menu{
+  display: grid;
+  place-content: center;
+}
+nav.show ul.grid{
+  gap:4rem;
 }
 .divider-1{
   height: 1px;
@@ -95,13 +160,7 @@ nav {
     hsla(var(--hue), 66%, 88%, 0.34) 100%
   );
 }
-.logo {
-  font: 700 1.31rem "Poppins", sans-serif;
-  color: var(--title-color);
-}
-.logo span{
-  color: var(--base-color);
-}
+
 .container {
   width: 100%;
   margin-left: 1.5rem;
