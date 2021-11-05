@@ -66,6 +66,9 @@ main {
 .logo span {
   color: var(--base-color);
 }
+.logo-alt span{
+  color: #e4e4e4;
+}
 
 /*===========layout============*/
 .container {
@@ -364,6 +367,7 @@ font-style: normal;
   }
  
   /*swiper*/
+
 .swiper-slide{
   height: auto;
   padding: 4rem 1rem;
@@ -398,4 +402,27 @@ margin-bottom: 2rem;
 }
 #contact ul li i{
   color: var(--base-color);
+}
+
+/*=============footer===========*/
+footer{
+  background:var(--base-color);
+}
+footer .logo span{
+  color: var(--body-color);
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+footer .brand p{
+  color: var(--text-color-light);
+  margin-bottom: 0.75rem;
+}
+
+footer i{
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+}
+footer .social  a{
+  margin-right: 2rem;
+   
 }
