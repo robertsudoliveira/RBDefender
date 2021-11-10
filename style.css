@@ -424,10 +424,15 @@ footer i{
 }
 footer .social  a{
   margin-right: 2rem;
+  transition: 0.3s;
+  display: inline-block;
    
 }
+footer .social a:hover{
+  transform: translateY(-8px);
+}
 /*back to up*/
-.back-to-up{
+.back-to-top{
   background: var(--base-color);
   color:var(--text-color-light);
   position: fixed;
@@ -439,9 +444,11 @@ footer .social  a{
   visibility: hidden; 
   opacity: 0;
   transition: 0.3s;
+  transform: translateY(100%);
 } 
-.back-to-up .show{
+.back-to-top.show{
   visibility: visible;
   opacity: 1;
+  transform: translateY(0);
   
 }

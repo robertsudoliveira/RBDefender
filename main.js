@@ -65,13 +65,12 @@ scrollReveal.reveal(
 
 
 /*botão de voltar para o home*/
-const  backToUpButton = document.querySelector('.back-to-up')
+const  backToTopButton = document.querySelector('.back-to-top')
 window.addEventListener('scroll', function(){
   if(window.scrollY >= 560){
-    backToUpButton.classList.add('show') 
+    backToTopButton.classList.add('show') 
   }else{
-    backToUpButton.classList.remove('show')
+    backToTopButton.classList.remove('show')
   }
 
 })
-        
