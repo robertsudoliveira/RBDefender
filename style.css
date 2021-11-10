@@ -426,3 +426,22 @@ footer .social  a{
   margin-right: 2rem;
    
 }
+/*back to up*/
+.back-to-up{
+  background: var(--base-color);
+  color:var(--text-color-light);
+  position: fixed;
+  right: 1rem; 
+  bottom: 1rem;
+  padding: 0.5rem;
+  clip-path: circle();
+  line-height: 0;
+  visibility: hidden; 
+  opacity: 0;
+  transition: 0.3s;
+} 
+.back-to-up .show{
+  visibility: visible;
+  opacity: 1;
+  
+}
