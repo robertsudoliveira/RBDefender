@@ -17,37 +17,30 @@ for (const link of links) {
   });
 }
 
-
-
 /* evento de scroll da página*/
-const header = document.querySelector("#header")
-const navHeight = header.offsetHeight
 
-window.addEventListener('scroll', function(){
-  if(window.scrollY >= navHeight){
-    header.classList.add('scroll')
-  }else{
-    header.classList.remove('scroll')
+function changeHeaderWhenScroll() {
+  const header = document.querySelector("#header");
+  const navHeight = header.offsetHeight;
+  if (window.scrollY >= navHeight) {
+    header.classList.add("scroll");
+  } else {
+    header.classList.remove("scroll");
   }
-})
+}
 
-
-
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper(".swiper", {
   slidesPerView: 1,
-  pagination:{
-    el:'.swiper-pagination'
+  pagination: {
+    el: ".swiper-pagination",
   },
-  mousewheel:true,
-  keyboard:true,
-
+  mousewheel: true,
+  keyboard: true,
 });
 
-
-
 const scrollReveal = ScrollReveal({
-  origin: 'top',
-  distance: '30px',
+  origin: "top",
+  distance: "30px",
   duration: 700,
   reset: true,
 });
@@ -63,14 +56,18 @@ scrollReveal.reveal(
   { interval: 100 }
 );
 
-
 /*botão de voltar para o home*/
-const  backToTopButton = document.querySelector('.back-to-top')
-window.addEventListener('scroll', function(){
-  if(window.scrollY >= 560){
-    backToTopButton.classList.add('show') 
-  }else{
-    backToTopButton.classList.remove('show')
-  }
+function backToTop() {
+  const backToTopButton = document.querySelector(".back-to-top");
 
-})
+  if (window.scrollY >= 560) {
+    backToTopButton.classList.add("show");
+  } else {
+    backToTopButton.classList.remove("show");
+  }
+}
+/*When Scroll*/
+window.addEventListener("scroll", function () {
+  changeHeaderWhenScroll();
+  backToTop()
+});
