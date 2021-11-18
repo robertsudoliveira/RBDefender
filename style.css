@@ -40,6 +40,8 @@ body {
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
+  /*font*/
+  --title-font-size: 1.875rem;
 }
 main {
   margin-top: calc(4.5rem + 2rem);
@@ -60,7 +62,7 @@ main {
 }
 /*logo */
 .logo {
-  font: 700 1.31rem "Poppins", sans-serif;
+  font: 700 var(--title-font-size) "Poppins", sans-serif;
   color: var(--title-color);
 }
 .logo span {
@@ -452,5 +454,14 @@ footer .social a:hover{
   transform: translateY(0);
   
 }
-/*Resposividade*/
-@media
+/*=============media queries=============*/
+/*extra large devices 1200 >*/
+/*large devices 1023 >*/
+/*large devices 992 > */
+/*Medius Devices 767  > */
+@media (min-width: 992px){
+  :root {
+    --title-font-size: 2.2rem;
+  }
+
+}
