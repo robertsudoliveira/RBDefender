@@ -43,8 +43,8 @@ body {
   /*font*/
   --title-font-size: 1.875rem;
   --subtitle-font-size: 1rem;
-  --title-font: 'Poppins', sans-serif;
-  --body-font: 'DM Sans', sans-serif;
+  --title-font: "Poppins", sans-serif;
+  --body-font: "DM Sans", sans-serif;
 }
 
 #header.scroll {
@@ -413,7 +413,7 @@ nav.show div.icon-x {
 footer {
   background: var(--base-color);
 }
-footer.section{
+footer.section {
   padding: 4rem 0;
 }
 footer .logo span {
@@ -430,7 +430,7 @@ footer i {
   font-size: 1.5rem;
   color: var(--text-color-light);
 }
-footer .social{
+footer .social {
   grid-auto-flow: column;
   width: fit-content;
 }
@@ -464,28 +464,53 @@ footer .social a:hover {
 /*=============media queries=============*/
 /*extra large devices 1200 >*/
 @media (min-width: 1200px) {
-  .section{
+  /*Reusable classes*/
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section {
     padding: 10rem 0;
   }
-  nav .menu{
+  .button{
+    height: 3.125rem;
+    
+  }
+  /*=Navigation=*/
+  nav .menu {
     opacity: 1;
     visibility: visible;
-    top:0;
+    top: 0;
   }
-  nav .menu ul{
+  nav .menu ul {
     display: flex;
-    gap:2rem;
+    gap: 2rem;
   }
-  nav .menu ul li a.title{
+  nav .menu ul li a.title {
     font: 400 1rem var(--body-font);
   }
-  nav .icon-menu{
+  nav .icon-menu {
     display: none;
   }
-    main {
-      margin-top: var(--header-height);
-    }
+  /* home */
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin:  0 auto;
   }
+  #home .image {
+    order: 1;
+  }
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+  main {
+    margin-top: var(--header-height);
+  }
+}
 
 /*large devices 1023 >*/
 /*large devices 992 > */
