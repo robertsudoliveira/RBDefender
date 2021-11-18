@@ -475,7 +475,7 @@ footer .social a:hover {
   }
   .button{
     height: 3.125rem;
-    
+
   }
   /*=Navigation=*/
   nav .menu {
@@ -493,6 +493,10 @@ footer .social a:hover {
   nav .icon-menu {
     display: none;
   }
+  /*layout*/
+  main {
+    margin-top: var(--header-height);
+  }
   /* home */
   #home .container {
     grid-auto-flow: column;
@@ -507,8 +511,12 @@ footer .social a:hover {
     max-width: 24rem;
     text-align: left;
   }
-  main {
-    margin-top: var(--header-height);
+  
+  /*about*/
+  #about .container{
+    margin: 0 auto;
+    grid-auto-flow: column;
+
   }
 }
 
