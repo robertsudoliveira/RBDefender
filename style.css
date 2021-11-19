@@ -529,8 +529,8 @@ footer .social a:hover {
     grid-template-columns:  1fr 1fr 1fr;
   }
   .card{
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   /*Testimonials*/
   #testimonials .container {
