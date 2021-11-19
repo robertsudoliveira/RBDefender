@@ -307,8 +307,9 @@ nav.show div.icon-x {
 /*=========Services========*/
 .cards.grid {
   gap: 1.5rem;
+  
 }
-.card {
+.card{
   padding: 3.625rem 2rem;
   box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.08);
   border-bottom: 0.25rem solid var(--base-color);
@@ -473,9 +474,15 @@ footer .social a:hover {
   .section {
     padding: 10rem 0;
   }
-  .button{
+  .section header,
+  #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .button {
     height: 3.125rem;
-
   }
   /*=Navigation=*/
   nav .menu {
@@ -501,7 +508,7 @@ footer .social a:hover {
   #home .container {
     grid-auto-flow: column;
     justify-content: space-between;
-    margin:  0 auto;
+    margin: 0 auto;
   }
   #home .image {
     order: 1;
@@ -511,12 +518,24 @@ footer .social a:hover {
     max-width: 24rem;
     text-align: left;
   }
-  
+
   /*about*/
-  #about .container{
+  #about .container {
     margin: 0 auto;
     grid-auto-flow: column;
-
+  }
+  /*services*/
+  .cards{
+    grid-template-columns:  1fr 1fr 1fr;
+  }
+  .card{
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  /*Testimonials*/
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
