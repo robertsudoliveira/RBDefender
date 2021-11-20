@@ -7,8 +7,8 @@ ul {
   list-style: none;
 }
 img {
-  width: 100%;
-  height: auto;
+   width: 100%; 
+   height: auto; 
 }
 a {
   text-decoration: none;
@@ -31,7 +31,7 @@ body {
 :root {
   --header-height: 4.5rem;
   /* colors */
-  --hue: 220;
+  --hue: 225;
   /* HSL color mode */
   --base-color: hsl(var(--hue) 36% 57%);
   --base-color-second: hsl(var(--hue) 65% 88%);
@@ -118,7 +118,8 @@ nav {
 nav ul li {
   text-align: center;
 }
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: var(--base-color);
 }
 nav ul li a::after {
@@ -131,7 +132,8 @@ nav ul li a::after {
   bottom: -1.5rem;
   transition: 0.2s;
 }
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a.active::after {
   width: 100%;
 }
 nav ul li a {
@@ -305,24 +307,16 @@ nav.show div.icon-x {
   margin-right: 1.5rem;
 }
 /*=========Services========*/
-.cards.grid {
-  gap: 1.5rem;
-  
-}
-.card{
-  padding: 3.625rem 2rem;
+
+.card {
+  padding: 2rem 1rem;
   box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.08);
   border-bottom: 0.25rem solid var(--base-color);
   border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
 }
 
-.card i {
-  display: block;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-  color: var(--base-color);
-}
+
 .card .title {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
@@ -334,6 +328,8 @@ nav.show div.icon-x {
 #testimonials .container {
   margin-right: 0;
   margin-left: 0;
+  position: relative;
+  overflow: hidden;
 }
 #testimonials header {
   margin-right: 1.5rem;
@@ -496,6 +492,12 @@ footer .social a:hover {
   }
   nav .menu ul li a.title {
     font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav .menu ul li a.title.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
   }
   nav .icon-menu {
     display: none;
@@ -525,10 +527,10 @@ footer .social a:hover {
     grid-auto-flow: column;
   }
   /*services*/
-  .cards{
-    grid-template-columns:  1fr 1fr 1fr;
+  .cards {
+    grid-template-columns: 0.90fr 1fr 1fr;
   }
-  .card{
+  .card {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -537,13 +539,30 @@ footer .social a:hover {
     margin-left: auto;
     margin-right: auto;
   }
-  /*contact*/
-  #contact .container{
+  /** contact*/
+  #contact .container {
     grid-auto-flow: column;
     align-items: center;
   }
-  #contact  .text {
+  #contact .text {
     max-width: 25rem;
+  }
+  /* *footer*/
+  footer .section {
+    padding: 3.75rem 0;
+  }
+
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .social {
+    justify-content: center;
+  }
+
+  footer .logo {
+    font-size: 2.25rem;
   }
 }
 
